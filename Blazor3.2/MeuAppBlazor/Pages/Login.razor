@@ -1,0 +1,55 @@
+@page "/login"
+
+<br />
+<br />
+<br />
+
+<div >
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" style="text-align: center;">
+  <img src="http://www.winsizing.com/poccalibracao/imagem/logo_gerdau.png" style="width: 50%;">
+  </div>
+  <div class="col-md-2"></div>
+</div>
+  <div class="row " style="margin-top: 150px;">
+  <div class="col-md-3 col-sm-1 col-xs-1"></div>
+  <div class="col-md-6 col-sm-10 col-xs-10 box-login">
+    <div class="row " style="border-bottom: #c3c3c3 solid 2px;">
+      <div class="col-md-4 "></div>
+      <div class="col-md-4 " style="text-align: center;">
+        <h2>Login</h2>
+      </div>
+      <div class="col-md-4 "></div>
+    </div>
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="login">Usuário</label>
+          <br>
+          <span *ngIf="userNE" style="color: red; margin:5px;">Usuário não cadastrado</span>
+          <span *ngIf="loginNull" style="color: red;margin:5px;">Campo Obrigatório</span>
+          <input type="text" class="form-control" id="login" (input)="this.user.login = $event.target.value" required>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <br>
+          @* <span *ngIf="senhaEr" style="color: red;margin:5px;">Senha incorreta</span>
+          <span *ngIf="senhaNull" style="color: red;margin:5px;">Campo Obrigatório</span>
+          <input type="password" class="form-control" id="senha" (input)="this.user.senha = $event.target.value"
+            required> *@
+        </div>
+        <div class="row">
+          <div class="col-md-5"></div>
+          @* <div class="col-md-2"> <a (click)="onSubmit(user.login, user.senha)" class="btn btn-lg btn-green">Entrar</a> *@
+          @* </div> *@
+          <div class="col-md-5"></div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-1"></div>
+</div>
+</div>

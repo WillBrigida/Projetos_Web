@@ -1,0 +1,25 @@
+@page "/databinding"
+
+<br/>
+<br/>
+<br/>
+<h2>DataBinding</h2>
+
+<h3>Interpolation</h3>
+<p>O número de clique é @contador</p>
+<br/>
+<br/>
+
+<h3>Property Binding</h3>
+<button class="btn btn-info" disabled="@ChangeValues">Botão</button>
+
+<br/>
+<br/>
+<img src="@UrlImagem" width="50px" height="50px"/>
+
+@code  {
+     int contador = 2;     
+        public bool ChangeValues {get; set;} = true;
+        public string UrlImagem {get; set;} = "http://angular.io/assets/images/logos/angular/angular.svg";
+}
+
